@@ -1,6 +1,7 @@
 #!/bin/sh
 set -ex
 export CUSTOM_COMPILE_COMMAND="./compile.sh"
+# Testing repo today aftaer adding a new feature
 # mysqlclient requirements found on each version's "Databases" documentation page:
 # https://docs.djangoproject.com/en/2.2/ref/databases/#id6
 python3.5 -m piptools compile --generate-hashes -P 'Django>=1.11,<2.0' -P 'mysqlclient>=1.3.3,<=1.3.13' "$@" -o py35-django111.txt
